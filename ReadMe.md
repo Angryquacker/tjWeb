@@ -2,7 +2,7 @@
 
 ### Version 1.0.0 - First Release
 
-##Creating The Server
+## Creating The Server
 - To create the server, create a new server object
 	- `Server Test = new Server(String address, int port);` -> address [host address of the server], port [port to run the server on]
 	- Ex. `Server Test = new Server("http://localhost", 8080);` (Will start a server on "http://localhost:8080")
