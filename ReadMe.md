@@ -1,4 +1,4 @@
-﻿# TjWeb - A Simple and LightWeight Web Framework
+# TjWeb - A Simple and Lightweight Web Library
 
 ### Version 1.0.0 - First Release
 
