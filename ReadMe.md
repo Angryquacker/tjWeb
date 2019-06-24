@@ -1,6 +1,6 @@
 ﻿# TjWeb - A Simple and LightWeight Web Framework
 
-###Version 1.0.0 - First Release
+### Version 1.0.0 - First Release
 
 ##Creating The Server
 - To create the server, create a new server object
@@ -15,12 +15,12 @@
 	- `Test.SetThreadLoopTimeout(int WaitTime)` -> WaitTime [The time to wait inbetween thread checks (Time is in ms)]
 	- Ex. `Test.SetThreadLoopTimeout(550);`
 
-##Adding a Route
+## Adding a Route
 - To Add a route to the server, use the AddRoute method
 	- `Test.AddRoute(RouteType Route, String Route, Action<HttpListenerRequest, ResponseObject> Function)` -> Type [The type of route to accpet (RouteType.GET, RouteType.POST, RouteType.PUT, RouteType.DELETE)], Route [The route to accept], Function [A method/lambda accepting two paramaters of type HttpListenerRequest, and ResponseObject]
 	- Ex. `Test.AddRoute(RouteType.GET, "/", (HttpListenerRequest req, ResponseObject res) => { /*Do stuff here */ });`
 
-##Sending a Response 
+## Sending a Response 
 - To Send a response, first create the response, then send it
 
 - To Set the status code and message of a response, use the SetStatus method
@@ -41,15 +41,14 @@
 
 - Finally, to send the response, simply do this: `res.Send();`
 
-##Starting the Server
+## Starting the Server
 - To Start the server, simply use the start method
 	- `Test.Start();`
 
-##Example Server
+## Example Server
 - An exmaple of a working web server as seen in the text file `./Test/Test.cs`
 
-`
-class Test
+` class Test
 {
 	static void Main(string[] args)
 	{
@@ -79,5 +78,4 @@ class Test
 		//Start the server
 		TestServer.Start();
 	}
-}
-`
+} `
