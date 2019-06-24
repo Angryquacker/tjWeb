@@ -48,7 +48,7 @@
 ## Example Server
 - An exmaple of a working web server as seen in the text file `./Test/Test.cs`
 
-```
+~~~
 class Test
 {
 	static void Main(string[] args)
@@ -80,4 +80,4 @@ class Test
 		TestServer.Start();
 	}
 } 
-```
+~~~
