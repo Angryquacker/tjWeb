@@ -1,0 +1,5 @@
+C:\Users\Hahn-4\source\repos\TjWeb\TjWeb\bin\Release\TjWeb.dll
+C:\Users\Hahn-4\source\repos\TjWeb\TjWeb\bin\Release\TjWeb.pdb
+C:\Users\Hahn-4\source\repos\TjWeb\TjWeb\obj\Release\TjWeb.csproj.CoreCompileInputs.cache
+C:\Users\Hahn-4\source\repos\TjWeb\TjWeb\obj\Release\TjWeb.dll
+C:\Users\Hahn-4\source\repos\TjWeb\TjWeb\obj\Release\TjWeb.pdb
