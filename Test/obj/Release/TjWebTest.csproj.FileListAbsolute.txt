@@ -1,0 +1,10 @@
+D:\C#\TjWebTest\bin\Release\TjWebTest.exe.config
+D:\C#\TjWebTest\bin\Release\TjWebTest.exe
+D:\C#\TjWebTest\bin\Release\TjWebTest.pdb
+D:\C#\TjWebTest\bin\Release\TjWeb.dll
+D:\C#\TjWebTest\bin\Release\TjWeb.pdb
+D:\C#\TjWebTest\obj\Release\TjWebTest.csprojAssemblyReference.cache
+D:\C#\TjWebTest\obj\Release\TjWebTest.csproj.CoreCompileInputs.cache
+D:\C#\TjWebTest\obj\Release\TjWebTest.csproj.CopyComplete
+D:\C#\TjWebTest\obj\Release\TjWebTest.exe
+D:\C#\TjWebTest\obj\Release\TjWebTest.pdb
