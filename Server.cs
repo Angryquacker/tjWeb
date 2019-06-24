@@ -53,7 +53,6 @@ namespace TjWeb
                 }
             }
 
-            Console.WriteLine("Active Threads: {0}", ActiveThreads);
             Thread.Sleep(500);
             HandlerLoop();
         }
