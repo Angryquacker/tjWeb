@@ -1,29 +1,31 @@
 ﻿using System;
 using System.Net;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TjWeb
 {
     public class HandlerFunction
     {
+        //The type of route to accept
         public RouteType Type;
-        public Action<HttpListenerRequest, ResponseObject> Function;
-        public String Route;
-        public List<String> WildCards = new List<String>();
 
+        //The function to run if the route is found
+        public Action<HttpListenerRequest, ResponseObject> Function;
+
+        //The route to accept
+        public String Route;
+
+        /*
+         * Method -> Constructor [Sets the values of all the variables]
+         * @Param (RouteType) Type -> The type of request to accept
+         * @Param (Action<HttpListenerRequest, ResponseObject>) Function -> The Function to run if the route is found
+         * @Param (String) Route -> The route to accept
+         */
         public HandlerFunction(RouteType Type, Action<HttpListenerRequest, ResponseObject> Function, String Route)
         {
+            //Set the values
             this.Type = Type;
             this.Function = Function;
             this.Route = Route;
-        }
-
-        public void AddWildCard(String WildCard)
-        {
-            WildCards.Add(WildCard);
         }
     }
 }

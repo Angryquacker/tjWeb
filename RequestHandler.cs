@@ -1,25 +1,30 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TjWeb
 {
     class RequestHandler
     {
+        //The HttpListener
         public HttpListener Listener;
 
+        //The lists of each route type
         private List<HandlerFunction> GetFunctions = new List<HandlerFunction>();
         private List<HandlerFunction> PostFunctions = new List<HandlerFunction>();
         private List<HandlerFunction> PutFunctions = new List<HandlerFunction>();
         private List<HandlerFunction> DeleteFunctions = new List<HandlerFunction>();
 
+        /*
+         * Method -> Constructor [Sets each of the routes to the respected lists]
+         * @Param (HttpListener) Listener -> The HttpListener to use
+         * Returns - Void
+         */ 
         public RequestHandler(HttpListener Listener)
         {
+            //Set the listener
             this.Listener = Listener;
 
+            //Go through each Route and add it to its respected lists of the correct type
             for (int i = 0;i < Server.Routes.Count;i++)
             {
                 switch (Server.Routes[i].Type)
@@ -40,14 +45,22 @@ namespace TjWeb
             }
         }
 
+        /*
+         * Method -> Handle [Determines which function to run]
+         * Returns -> Void
+         */ 
         public void Handle()
         {
+            //Get the Context, Request, and Response objects
             HttpListenerContext context = Listener.GetContext();
             HttpListenerRequest request = context.Request;
             HttpListenerResponse HttpResponse = context.Response;
+
+            //Create a custom response object
             ResponseObject response = new ResponseObject(HttpResponse);
 
 
+            //Determine which function to run, then run it
             switch (request.HttpMethod)
             {
                 case "GET":
@@ -88,6 +101,7 @@ namespace TjWeb
                     break;
             }
 
+            //This class is now useless, so subtract one from the active thread count
             Server.ActiveThreads--;
         }
     }
