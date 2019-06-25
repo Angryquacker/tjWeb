@@ -1,6 +1,6 @@
 # TjWeb - A Simple and Lightweight Web Library
 
-### Version 1.0.0 - First Release
+### Version 1.0.1 - Fixed bug which prevented the addition of a query string to the request
 
 ## Creating The Server
 - To create the server, create a new server object

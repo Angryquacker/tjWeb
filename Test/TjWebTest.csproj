@@ -50,7 +50,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\Hahn-4\source\repos\TjWeb\TjWeb\TjWeb.csproj">
+    <ProjectReference Include="..\TjWeb.csproj">
       <Project>{58e4a5bf-3b5a-4024-8021-05152ecc4d14}</Project>
       <Name>TjWeb</Name>
     </ProjectReference>

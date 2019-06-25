@@ -3,3 +3,8 @@ C:\Users\Hahn-4\source\repos\TjWeb\TjWeb\bin\Release\TjWeb.pdb
 C:\Users\Hahn-4\source\repos\TjWeb\TjWeb\obj\Release\TjWeb.csproj.CoreCompileInputs.cache
 C:\Users\Hahn-4\source\repos\TjWeb\TjWeb\obj\Release\TjWeb.dll
 C:\Users\Hahn-4\source\repos\TjWeb\TjWeb\obj\Release\TjWeb.pdb
+C:\Users\crystal\Downloads\TjWeb-master\TjWeb-master\bin\Release\TjWeb.dll
+C:\Users\crystal\Downloads\TjWeb-master\TjWeb-master\bin\Release\TjWeb.pdb
+C:\Users\crystal\Downloads\TjWeb-master\TjWeb-master\obj\Release\TjWeb.csproj.CoreCompileInputs.cache
+C:\Users\crystal\Downloads\TjWeb-master\TjWeb-master\obj\Release\TjWeb.dll
+C:\Users\crystal\Downloads\TjWeb-master\TjWeb-master\obj\Release\TjWeb.pdb

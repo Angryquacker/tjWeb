@@ -59,6 +59,8 @@ namespace TjWeb
             //Create a custom response object
             ResponseObject response = new ResponseObject(HttpResponse);
 
+            //Get the true route string (allows for an addition of a query string)
+            string temp = request.RawUrl.Split('?')[0].Replace("%20", "").TrimEnd();
 
             //Determine which function to run, then run it
             switch (request.HttpMethod)
@@ -66,7 +68,7 @@ namespace TjWeb
                 case "GET":
                     for (int i = 0;i < GetFunctions.Count;i++)
                     {
-                        if(request.RawUrl == GetFunctions[i].Route)
+                        if(temp == GetFunctions[i].Route)
                         {
                             GetFunctions[i].Function(request, response);
                         }
@@ -75,7 +77,7 @@ namespace TjWeb
                 case "POST":
                     for (int i = 0; i < PostFunctions.Count; i++)
                     {
-                        if (request.RawUrl == PostFunctions[i].Route)
+                        if (temp == PostFunctions[i].Route)
                         {
                             PostFunctions[i].Function(request, response);
                         }
@@ -84,7 +86,7 @@ namespace TjWeb
                 case "PUT":
                     for (int i = 0; i < PutFunctions.Count; i++)
                     {
-                        if (request.RawUrl == PutFunctions[i].Route)
+                        if (temp == PutFunctions[i].Route)
                         {
                             PutFunctions[i].Function(request, response);
                         }
@@ -93,7 +95,7 @@ namespace TjWeb
                 case "DELETE":
                     for (int i = 0; i < DeleteFunctions.Count; i++)
                     {
-                        if (request.RawUrl == DeleteFunctions[i].Route)
+                        if (temp == DeleteFunctions[i].Route)
                         {
                             DeleteFunctions[i].Function(request, response);
                         }

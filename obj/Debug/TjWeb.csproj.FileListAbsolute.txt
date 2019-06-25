@@ -4,3 +4,9 @@ C:\Users\Hahn-4\source\repos\TjWeb\TjWeb\obj\Debug\TjWeb.csprojAssemblyReference
 C:\Users\Hahn-4\source\repos\TjWeb\TjWeb\obj\Debug\TjWeb.csproj.CoreCompileInputs.cache
 C:\Users\Hahn-4\source\repos\TjWeb\TjWeb\obj\Debug\TjWeb.dll
 C:\Users\Hahn-4\source\repos\TjWeb\TjWeb\obj\Debug\TjWeb.pdb
+C:\Users\crystal\Downloads\TjWeb-master\TjWeb-master\bin\Debug\TjWeb.dll
+C:\Users\crystal\Downloads\TjWeb-master\TjWeb-master\bin\Debug\TjWeb.pdb
+C:\Users\crystal\Downloads\TjWeb-master\TjWeb-master\obj\Debug\TjWeb.csprojAssemblyReference.cache
+C:\Users\crystal\Downloads\TjWeb-master\TjWeb-master\obj\Debug\TjWeb.csproj.CoreCompileInputs.cache
+C:\Users\crystal\Downloads\TjWeb-master\TjWeb-master\obj\Debug\TjWeb.dll
+C:\Users\crystal\Downloads\TjWeb-master\TjWeb-master\obj\Debug\TjWeb.pdb
