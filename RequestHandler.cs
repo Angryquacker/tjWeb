@@ -36,9 +36,6 @@ namespace TjWeb
          */ 
         public void Handle()
         {
-            //This handler has been activate, and the class is now garbage, so subtract one from the active thread count
-            Server.ActiveThreads--;
-
             //Get the Context, Request, and Response objects
             HttpListenerContext context = Listener.GetContext();
             HttpListenerRequest req = context.Request;
@@ -90,7 +87,10 @@ namespace TjWeb
                         }
                     }
                     break;
-            }            
+            }
+
+            //This handler has been activate, and the class is now garbage, so subtract one from the active thread count
+            Server.ActiveThreads--;
         }
     }
 }

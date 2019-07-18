@@ -29,3 +29,4 @@ D:\Downloads\TjWeb-master\TjWeb-master\Test\obj\Debug\TjWebTest.csproj.CopyCompl
 D:\Downloads\TjWeb-master\TjWeb-master\Test\obj\Debug\TjWebTest.exe
 D:\Downloads\TjWeb-master\TjWeb-master\Test\obj\Debug\TjWebTest.pdb
 D:\Downloads\TjWeb-master\TjWeb-master\Test\bin\Debug\Newtonsoft.Json.xml
+D:\Downloads\TjWeb-master\TjWeb-master\Test\bin\Debug\Newtonsoft.Json.dll

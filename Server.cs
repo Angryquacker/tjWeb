@@ -117,7 +117,7 @@ namespace TjWeb
                     Thread temp = new Thread(tempHandler.Handle);
                     temp.Start();
 
-                    //Null-terminate the active handler to save space
+                    //Null terminate the handler 
                     tempHandler = null;
 
                     //Add one to the active threads
