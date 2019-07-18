@@ -1,5 +1,4 @@
 ﻿using TjWeb;
-using System.Net;
 
 namespace TjWebTest
 {
@@ -17,7 +16,7 @@ namespace TjWebTest
             TestServer.SetThreadLoopTimeout(550);
 
             //Add a new route of type GET, on route "/"
-            TestServer.AddRoute(RouteType.GET, "/", (HttpListenerRequest req, ResponseObject res) =>
+            TestServer.AddRoute(RouteType.GET, "/", (RequestObject req, ResponseObject res) =>
             {
                 //Set the status of the request
                 res.SetStatus(200, "OK");
@@ -30,7 +29,6 @@ namespace TjWebTest
                 res.Send();
             });
 
-            //Start the server
             TestServer.Start();
         }
     }

@@ -9,7 +9,7 @@ namespace TjWeb
         public RouteType Type;
 
         //The function to run if the route is found
-        public Action<HttpListenerRequest, ResponseObject> Function;
+        public Action<RequestObject, ResponseObject> Function;
 
         //The route to accept
         public String Route;
@@ -20,7 +20,7 @@ namespace TjWeb
          * @Param (Action<HttpListenerRequest, ResponseObject>) Function -> The Function to run if the route is found
          * @Param (String) Route -> The route to accept
          */
-        public HandlerFunction(RouteType Type, Action<HttpListenerRequest, ResponseObject> Function, String Route)
+        public HandlerFunction(RouteType Type, Action<RequestObject, ResponseObject> Function, String Route)
         {
             //Set the values
             this.Type = Type;

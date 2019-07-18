@@ -9,10 +9,10 @@ namespace TjWeb
         public HttpListener Listener;
 
         //The lists of each route type
-        private List<HandlerFunction> GetFunctions = new List<HandlerFunction>();
-        private List<HandlerFunction> PostFunctions = new List<HandlerFunction>();
-        private List<HandlerFunction> PutFunctions = new List<HandlerFunction>();
-        private List<HandlerFunction> DeleteFunctions = new List<HandlerFunction>();
+        private List<HandlerFunction> GetFunctions;
+        private List<HandlerFunction> PostFunctions;
+        private List<HandlerFunction> PutFunctions;
+        private List<HandlerFunction> DeleteFunctions;
 
         /*
          * Method -> Constructor [Sets each of the routes to the respected lists]
@@ -24,25 +24,10 @@ namespace TjWeb
             //Set the listener
             this.Listener = Listener;
 
-            //Go through each Route and add it to its respected lists of the correct type
-            for (int i = 0;i < Server.Routes.Count;i++)
-            {
-                switch (Server.Routes[i].Type)
-                {
-                    case RouteType.GET:
-                        GetFunctions.Add(Server.Routes[i]);
-                        break;
-                    case RouteType.POST:
-                        PostFunctions.Add(Server.Routes[i]);
-                        break;
-                    case RouteType.PUT:
-                        PutFunctions.Add(Server.Routes[i]);
-                        break;
-                    case RouteType.DELETE:
-                        DeleteFunctions.Add(Server.Routes[i]);
-                        break;
-                }
-            }
+            GetFunctions = Server.GetFunctions;
+            PostFunctions = Server.PostFunctions;
+            PutFunctions = Server.PutFunctions;
+            DeleteFunctions = Server.DeleteFunctions;
         }
 
         /*
@@ -51,19 +36,23 @@ namespace TjWeb
          */ 
         public void Handle()
         {
+            //This handler has been activate, and the class is now garbage, so subtract one from the active thread count
+            Server.ActiveThreads--;
+
             //Get the Context, Request, and Response objects
             HttpListenerContext context = Listener.GetContext();
-            HttpListenerRequest request = context.Request;
+            HttpListenerRequest req = context.Request;
             HttpListenerResponse HttpResponse = context.Response;
 
-            //Create a custom response object
+            //Create a custom response and request object
             ResponseObject response = new ResponseObject(HttpResponse);
+            RequestObject request = new RequestObject(req);
 
             //Get the true route string (allows for an addition of a query string)
-            string temp = request.RawUrl.Split('?')[0].Replace("%20", "").TrimEnd();
+            string temp = req.RawUrl.Split('?')[0].Replace("%20", "").TrimEnd();
 
             //Determine which function to run, then run it
-            switch (request.HttpMethod)
+            switch (req.HttpMethod)
             {
                 case "GET":
                     for (int i = 0;i < GetFunctions.Count;i++)
@@ -101,10 +90,7 @@ namespace TjWeb
                         }
                     }
                     break;
-            }
-
-            //This class is now useless, so subtract one from the active thread count
-            Server.ActiveThreads--;
+            }            
         }
     }
 }

@@ -8,3 +8,11 @@ C:\Users\crystal\Downloads\TjWeb-master\TjWeb-master\bin\Release\TjWeb.pdb
 C:\Users\crystal\Downloads\TjWeb-master\TjWeb-master\obj\Release\TjWeb.csproj.CoreCompileInputs.cache
 C:\Users\crystal\Downloads\TjWeb-master\TjWeb-master\obj\Release\TjWeb.dll
 C:\Users\crystal\Downloads\TjWeb-master\TjWeb-master\obj\Release\TjWeb.pdb
+D:\Downloads\TjWeb-master\TjWeb-master\bin\Release\TjWeb.dll
+D:\Downloads\TjWeb-master\TjWeb-master\bin\Release\TjWeb.pdb
+D:\Downloads\TjWeb-master\TjWeb-master\bin\Release\Newtonsoft.Json.dll
+D:\Downloads\TjWeb-master\TjWeb-master\bin\Release\Newtonsoft.Json.xml
+D:\Downloads\TjWeb-master\TjWeb-master\obj\Release\TjWeb.csproj.CoreCompileInputs.cache
+D:\Downloads\TjWeb-master\TjWeb-master\obj\Release\TjWeb.csproj.CopyComplete
+D:\Downloads\TjWeb-master\TjWeb-master\obj\Release\TjWeb.dll
+D:\Downloads\TjWeb-master\TjWeb-master\obj\Release\TjWeb.pdb

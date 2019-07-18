@@ -23,12 +23,18 @@ namespace TjWeb
         //The host address
         private String MainAddress;
 
+        //The lists of each route type
+        public static List<HandlerFunction> GetFunctions = new List<HandlerFunction>();
+        public static List<HandlerFunction> PostFunctions = new List<HandlerFunction>();
+        public static List<HandlerFunction> PutFunctions = new List<HandlerFunction>();
+        public static List<HandlerFunction> DeleteFunctions = new List<HandlerFunction>();
+
         /*
          * Method -> Server Constructor
          * @Param (String) Address -> The host address of the server
          * @Param (int) Port -> The port to run the server on
          * Returns -> Void
-         */ 
+         */
         public Server(String Address, int Port)
         {
             //If the last character of the address is a /, remove it (Prevents error for user-defined routes)
@@ -48,10 +54,26 @@ namespace TjWeb
          * @Param (Action<HttpListenerRequest, ResponseObject>) Function -> The function to run when the route is found
          * Returns -> Void
          */
-        public void AddRoute(RouteType Type, String Route, Action<HttpListenerRequest, ResponseObject> Function)
+        public void AddRoute(RouteType Type, String Route, Action<RequestObject, ResponseObject> Function)
         {
             //Add the route
             Routes.Add(new HandlerFunction(Type, Function, Route));
+
+            switch (Routes[Routes.Count - 1].Type)
+            {
+                case RouteType.GET:
+                    GetFunctions.Add(Server.Routes[Routes.Count - 1]);
+                    break;
+                case RouteType.POST:
+                    PostFunctions.Add(Server.Routes[Routes.Count - 1]);
+                    break;
+                case RouteType.PUT:
+                    PutFunctions.Add(Server.Routes[Routes.Count - 1]);
+                    break;
+                case RouteType.DELETE:
+                    DeleteFunctions.Add(Server.Routes[Routes.Count - 1]);
+                    break;
+            }
         }
 
         /*
@@ -94,6 +116,9 @@ namespace TjWeb
                     RequestHandler tempHandler = new RequestHandler(Listener);
                     Thread temp = new Thread(tempHandler.Handle);
                     temp.Start();
+
+                    //Null-terminate the active handler to save space
+                    tempHandler = null;
 
                     //Add one to the active threads
                     ActiveThreads++;

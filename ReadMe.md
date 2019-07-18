@@ -41,6 +41,28 @@
 
 - Finally, to send the response, simply do this: `res.Send();`
 
+## Using the Request Object        
+- JObject Body; -> The request body in JSON form
+- JObject Query; -> The request query in JSON terms
+- CookieCollection Cookies; -> A collection of all the cookies
+- String[] AcceptTypes; -> All the acceptable types
+- Encoding ContentEncoding; -> The type of encoding used
+- String ContentType; -> The type of content sent
+- int HashCode; -> The hash code
+- JObject Headers; -> The headers and their values
+- RouteType HttpMethod; -> The type of route used
+- bool IsAuthenticated; -> The authentication status
+- bool SslSecure; -> The SSL secure status
+- bool IsWebSocket; -> The WebSocket Status
+- IPEndPoint LocalEndpoint; -> The local IP endpoint
+- Version HttpVersion; -> The HTTP Version
+- IPEndPoint OriginEndpoint; -> The origin IP endpoint
+- String SPN; -> The Service Provider name
+- TransportContext TransContext; -> The transport context
+- Uri URI; -> The universal resource identitifier 
+- String UserAgent; -> The user agent
+- String[] UserLanguages; -> The user languages
+
 ## Starting the Server
 - To Start the server, simply use the start method
 	- `Test.Start();`

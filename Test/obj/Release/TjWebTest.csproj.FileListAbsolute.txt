@@ -18,3 +18,15 @@ C:\Users\crystal\Downloads\TjWeb-master\TjWeb-master\Test\obj\Release\TjWebTest.
 C:\Users\crystal\Downloads\TjWeb-master\TjWeb-master\Test\obj\Release\TjWebTest.csproj.CopyComplete
 C:\Users\crystal\Downloads\TjWeb-master\TjWeb-master\Test\obj\Release\TjWebTest.exe
 C:\Users\crystal\Downloads\TjWeb-master\TjWeb-master\Test\obj\Release\TjWebTest.pdb
+D:\Downloads\TjWeb-master\TjWeb-master\Test\bin\Release\TjWebTest.exe.config
+D:\Downloads\TjWeb-master\TjWeb-master\Test\bin\Release\TjWebTest.exe
+D:\Downloads\TjWeb-master\TjWeb-master\Test\bin\Release\TjWebTest.pdb
+D:\Downloads\TjWeb-master\TjWeb-master\Test\bin\Release\TjWeb.dll
+D:\Downloads\TjWeb-master\TjWeb-master\Test\bin\Release\TjWeb.pdb
+D:\Downloads\TjWeb-master\TjWeb-master\Test\bin\Release\Newtonsoft.Json.xml
+D:\Downloads\TjWeb-master\TjWeb-master\Test\obj\Release\TjWebTest.csprojAssemblyReference.cache
+D:\Downloads\TjWeb-master\TjWeb-master\Test\obj\Release\TjWebTest.csproj.CoreCompileInputs.cache
+D:\Downloads\TjWeb-master\TjWeb-master\Test\obj\Release\TjWebTest.csproj.CopyComplete
+D:\Downloads\TjWeb-master\TjWeb-master\Test\obj\Release\TjWebTest.exe
+D:\Downloads\TjWeb-master\TjWeb-master\Test\obj\Release\TjWebTest.pdb
+D:\Downloads\TjWeb-master\TjWeb-master\Test\bin\Release\Newtonsoft.Json.dll
